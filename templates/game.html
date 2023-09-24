@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="hands_platform">
+    <div class="score">
+        <div class="score_background">
+            {{ score.pc }}
+        </div>
+        <div class="score_background" style="border: none; background:none">:</div>
+        <div class="score_background">
+            {{ score.user }}
+        </div>
+    </div>
+    <div>
+        <img class="hand-image" id="hand-left" src="{{ pc_image }}" alt="">
+    </div>
+    <div>
+        <img class="hand-image" id="hand-right" src="{{ user_image }}" alt="">
+    </div>
+</div>
+
+    
+
+<div id="user_options">
+    <form action="/game" id="form_map" method="POST">
+        <input type="text" name="user_choose" id="user_choose" value="" hidden>
+        <input type="submit" name="send" hidden>
+    </form>
+    <img src="/static/hands-test2.png" alt="" width="" usemap="#user-option" loading="lazy" id="choose_image">
+    <map name="user-option">
+        <area target="" alt="" title="" href="javascript:edit_submit('r')" coords="86,154,17,20" shape="rect">
+        <area target="" alt="" title="" href="javascript:edit_submit('s')" coords="104,18,183,153" shape="rect">
+        <area target="" alt="" title="" href="javascript:edit_submit('p')" coords="202,18,272,154" shape="rect">
+    </map>
+</div>
+<script>
+    function edit_submit(value){
+        const user_choose = document.getElementById("user_choose")
+        user_choose.value = value
+        const mapform = document.getElementById("form_map")
+        mapform.submit()
+    }
+</script>
+{% endblock %}
