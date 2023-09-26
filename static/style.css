@@ -1,6 +1,6 @@
 .background{
     background-color: #e2d9ad;
-    position: absolute;
+    position: fixed;
     top:0;
     bottom: 0;
     left: 0;
@@ -66,50 +66,81 @@
     /* width: 10vw; */
 }
 
-@media screen and (max-width: 992px) {
-    #user_options{
-        position: fixed;
-        left:23vw;
-
-    }
-    #choose_image{
-        width: 55vw;
-
-        }
-    
-    .hand-image{
-        width: 35vw;
-    }
-    .score{
-        position: fixed;
-        top:20px;
-        display: flex;
-        gap:10vw;
-    }
-    .score_background{
-        font-size: 1vw;
-        background-color: white;
-        border: solid black;
-        padding: 2vw;
-        border-radius: 5px;
-        
-    }
-}
-
 area{
     cursor: pointer;
 }
 .score{
-    position: fixed;
-    top:20px;
+    position: absolute;
+    top:35px;
     display: flex;
     gap:30px;
 }
 .score_background{
-    font-size: xx-large;
+    font-size: 2vw;
     background-color: white;
     border: solid black;
-    padding: 2vw;
-    border-radius: 5px;
+    padding: 1vw;
+    border-radius: 15px;
+        
+}
+
+@media screen and (max-width: 992px) {
+
+    .logo{
+        text-align: center;
+        margin-top: 22vh;
+        
+    }
+    #home-logo{
+        width: 97vw;
+    }
+
+    .start-div{
+        position: fixed;
+        left:39.4vw;
+        top:55vh;
+        width: 10vh;
+
+    }
+    .start-image{
+        object-fit:none;
+        width: 362px;
+        height: 149px;
+
+        
+    }
+    .start-image:active{
+        border: solid whitesmoke 10px;
+        border-radius: 30px;
+    }
+
+    .score{
+        display: flex;
+        flex-grow: 1vw;
+    }
+    .score_background{
+        font-size: 10vw;
+        background-color: white;
+        border: solid black;
+        padding: 2vw;
+        border-radius: 15px;
+        
+    }
+    #hands_platform{
+        margin-top:28vh ;
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        overflow: hidden;
+        margin-bottom: 25vh;
+    }
+    #user_options{
+        z-index: 3;
+        position: static;
+        text-align: center; 
+    }
+    .hand-image{
+        width: 40vw;
+    }
     
 }
