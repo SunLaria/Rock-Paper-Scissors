@@ -9,7 +9,6 @@
 }
 .logo{
     text-align: center;
-    
 }
 .start-div{
     position: fixed;
@@ -87,27 +86,27 @@ area{
 @media screen and (max-width: 992px) {
 
     .logo{
+        position: static;
         text-align: center;
         margin-top: 22vh;
         
     }
     #home-logo{
+        position: static;
         width: 97vw;
     }
 
     .start-div{
-        position: fixed;
-        left:39.4vw;
-        top:55vh;
-        width: 10vh;
+        display: flex;
+        text-align: center;
 
     }
     .start-image{
-        object-fit:none;
-        width: 362px;
-        height: 149px;
-
+        object-fit:contain;
+        position: static;
+        width: 50vw;
         
+
     }
     .start-image:active{
         border: solid whitesmoke 10px;
