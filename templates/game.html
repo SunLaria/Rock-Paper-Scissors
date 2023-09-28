@@ -10,11 +10,11 @@
             {{ score.user }}
         </div>
     </div>
-    <div>
-        <img class="hand-image" id="hand-left" src="{{ pc_image }}" alt="">
+    <div id="hand-left" >
+        <img class="hand-image"  id="hand-left-image" src="{{ pc_image }}" alt="">
     </div>
-    <div>
-        <img class="hand-image" id="hand-right" src="{{ user_image }}" alt="">
+    <div id="hand-right">
+        <img class="hand-image" id="hand-right-image" src="{{ user_image }}" alt="">
     </div>
 </div>
 
@@ -33,11 +33,27 @@
     </map>
 </div>
 <script>
+    if (window.location.href.includes("?")){
+        let left_hand = document.getElementById("hand-left");
+        left_hand.className="heartbeat";
+        let right_hand = document.getElementById("hand-right");
+        right_hand.className="heartbeat";
+    }
     function edit_submit(value){
-        const user_choose = document.getElementById("user_choose")
-        user_choose.value = value
-        const mapform = document.getElementById("form_map")
-        mapform.submit()
+        let left_hand = document.getElementById("hand-left-image")
+        left_hand.src= "/static/rock-left.png"
+        left_hand.className="hand-left-animation"
+        let right_hand= document.getElementById("hand-right-image")
+        right_hand.src= "/static/rock-right.png"
+        right_hand.className="hand-right-animation"
+        setTimeout(function(){ 
+            const user_choose = document.getElementById("user_choose");
+            user_choose.value = value
+            const mapform = document.getElementById("form_map")
+            mapform.submit()
+        }, 1000);
+
+        
     }
 </script>
 {% endblock %}
