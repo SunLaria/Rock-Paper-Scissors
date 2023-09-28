@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="logo"><img src="/static/logo.png" alt="" id="home-logo"></div>
-<div class="start-div" id="start-button">
-    <img class="start-image" src="/static/start_button2.png" alt="">
+<div id="home-menu">
+    <div class="logo"><img src="/static/logo.png" alt="" id="home-logo"></div>
+    <img class="start-image" id="start-image" src="/static/start_button.png" alt="">
 </div>
 <script>
-    let start_button = document.getElementById("start-button");
+    let start_button = document.getElementById("start-image");
         start_button.addEventListener("click",function(){
             return window.location.href = "/game"
     })
