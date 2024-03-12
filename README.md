@@ -17,7 +17,7 @@ Features:
 
 
 ## ScreenShots
-![](https://i.imgur.com/OKY5WLn.png)
+![](https://i.imgur.com/8XPKtK9.png)
 
 
 ## How to Setup:
@@ -30,7 +30,7 @@ docker run -p 5000:5000 docker.io/randomg1/rock-paper-scissors:1
 Locally:
 ```
 git clone https://github.com/SunLaria/Snowman-Game.git
-cd Snowman-Game
+cd Rock-Paper-Scissors
 python -m pip install -r requirements.txt
 flask run
 ```
