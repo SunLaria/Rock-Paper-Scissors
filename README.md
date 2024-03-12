@@ -1,7 +1,46 @@
-# Rock-Paper-Scissors
+# Rock Paper Scissors - Game
 
-Rock Paper Scissors web game app using flask.
+An Rock Paper Scissors Game
 
-Code languages used: Python, HTML, CSS, JS
+Features:
+- Friendly Game UI
+- Hand Throw Animations
+- Can Be Played On Desktop and Mobile
 
-The app is responsive
+
+## How To Play
+
+- Choose One Hand From Various Hands At the bottom right of the screen.
+- Your Hand Will be Thrown Alongside The Computer Opponent (CPU) Hand With A Nice Animation.
+- The One Who Win The Round Gets a Point.
+- The Game Is Endless
+
+
+## ScreenShots
+![](https://i.imgur.com/OKY5WLn.png)
+
+
+## How to Setup:
+Docker:
+```
+docker run -p 5000:5000 docker.io/randomg1/rock-paper-scissors:1
+```
+
+
+Locally:
+```
+git clone https://github.com/SunLaria/Snowman-Game.git
+cd Snowman-Game
+python -m pip install -r requirements.txt
+flask run
+```
+
+
+## How To Run:
+Navigate to http://localhost:5000/ or http://127.0.0.1:5000/
+
+
+## Additional Information
+
+- This Project Is Written in Python, HTML, CSS, JS inside Flask Framework.
+- The First Game I've Made in Python Using Flask.

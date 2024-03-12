@@ -1,5 +1,7 @@
 from flask import Flask,redirect,url_for,render_template,request,session
 import random
+from whitenoise import WhiteNoise
+
 
 user_hands={
     "r":"/static/rock-right.png",
@@ -13,7 +15,9 @@ pc_hands={
 }
 
 app=Flask(__name__)
+app.wsgi_app = WhiteNoise(app.wsgi_app, root="static/", prefix='static/')
 app.secret_key="123456"
+
 @app.route('/')
 def home():
     session["score"]={"user":0,"pc":0}
